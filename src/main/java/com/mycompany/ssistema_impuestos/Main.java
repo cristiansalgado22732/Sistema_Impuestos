@@ -11,7 +11,7 @@ import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {  
         System.out.println("===== SISTEMA DE DECLARACIÓN DE IMPUESTOS =====\n");
 
         // 1. Crear pasarela de pago

@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.ssistema_impuestos;
+import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela;
 
 /**
  *
@@ -15,7 +16,7 @@ public class Contribuyente extends Usuario {
     private double ingresos;
     private double gastos;
     private double deducciones;
-    //private List<Declaracion> declaraciones;
+    private List<Declaracion> declaraciones;
 
     public Contribuyente(int id, String nombre, String apellido, String contraseña, String correo,
                          double ingresos, double gastos, double deducciones) {
@@ -23,7 +24,7 @@ public class Contribuyente extends Usuario {
         this.ingresos = ingresos;
         this.gastos = gastos;
         this.deducciones = deducciones;
-        //this.declaraciones = new ArrayList<>();
+        this.declaraciones = new ArrayList<>();
     }
 
     public void registrarInformacionFinanciera(double ingresos, double gastos, double deducciones) {
@@ -40,32 +41,32 @@ public class Contribuyente extends Usuario {
         return impuesto;
     }
 
-//    public Declaracion generarDeclaracion() {
-//        double totalImpuesto = calcularImpuestos();
-//        Declaracion declaracion = new Declaracion(
-//            declaraciones.size() + 1,
-//            new java.util.Date(),
-//            "PENDIENTE",
-//            totalImpuesto
-//        );
-//        declaraciones.add(declaracion);
-//        System.out.println("Declaración generada con ID: " + declaracion.getId());
-//        return declaracion;
-//    }
-//
-//    public void enviarDeclaracion(Declaracion declaracion) {
-//        declaracion.enviar();
-//        System.out.println("Declaración enviada correctamente.");
-//    }
-//
-//    public void realizarPago(Declaracion declaracion, String metodoPago, Pasarela pasarela) {
-//        Pago pago = declaracion.getPago();
-//        if (pago == null) {
-//            pago = new Pago(1, declaracion.getTotalImpuesto(), metodoPago, "PENDIENTE");
-//            declaracion.setPago(pago);
-//        }
-//        pago.procesarPago(pasarela);
-//    }
+    public Declaracion generarDeclaracion() {
+        double totalImpuesto = calcularImpuestos();
+        Declaracion declaracion = new Declaracion(
+            declaraciones.size() + 1,
+            new java.util.Date(),
+            "PENDIENTE",
+            totalImpuesto
+        );
+        declaraciones.add(declaracion);
+        System.out.println("Declaración generada con ID: " + declaracion.getId());
+        return declaracion;
+    }
+
+    public void enviarDeclaracion(Declaracion declaracion) {
+        declaracion.enviar();
+        System.out.println("Declaración enviada correctamente.");
+    }
+
+    public void realizarPago(Declaracion declaracion, String metodoPago, Pasarela pasarela) {
+        Pago pago = declaracion.getPago();
+        if (pago == null) {
+            pago = new Pago(1, declaracion.getTotalImpuesto(), metodoPago, "PENDIENTE");
+            declaracion.setPago(pago);
+        }
+        pago.procesarPago(pasarela);
+    }
 
     // Getters y Setters
     public double getIngresos() { return ingresos; }

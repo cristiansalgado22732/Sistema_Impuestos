@@ -1,4 +1,5 @@
-package Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos;
+package com.mycompany.ssistema_impuestos;
+import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela;
 
 public class Pago {
      private int id;

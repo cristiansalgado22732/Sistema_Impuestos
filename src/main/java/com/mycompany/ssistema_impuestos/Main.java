@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.ssistema_impuestos;
+import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela;
 
 /**
  *

@@ -16,7 +16,7 @@ public class Declaracion {
     private Date fecha;
     private String estado;
     private double totalImpuesto;
-    //private Pago pago;
+    private Pago pago;
 
     public Declaracion(int id, Date fecha, String estado, double totalImpuesto) {
         this.id = id;
@@ -56,8 +56,13 @@ public class Declaracion {
     public double getTotalImpuesto() { return totalImpuesto; }
     public void setTotalImpuesto(double totalImpuesto) { this.totalImpuesto = totalImpuesto; }
 
-    public Pago getPago() { return pago; }
-    public void setPago(Pago pago) { this.pago = pago; }
+    public Pago getPago() {
+        return pago; 
+    }
+    
+    public void setPago(Pago pago) {
+        this.pago = pago; 
+    }
 
     @Override
     public String toString() {

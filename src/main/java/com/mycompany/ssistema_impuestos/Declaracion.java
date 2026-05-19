@@ -56,8 +56,8 @@ public class Declaracion {
     public double getTotalImpuesto() { return totalImpuesto; }
     public void setTotalImpuesto(double totalImpuesto) { this.totalImpuesto = totalImpuesto; }
 
-    //public Pago getPago() { return pago; }
-    //public void setPago(Pago pago) { this.pago = pago; }
+    public Pago getPago() { return pago; }
+    public void setPago(Pago pago) { this.pago = pago; }
 
     @Override
     public String toString() {

@@ -22,12 +22,12 @@ public class Administrador extends Usuario {
 
     public void aprobarDeclaracion(Declaracion declaracion) {
         declaracion.actualizarEstado("APROBADA");
-        System.out.println("Declaración ID " + declaracion.getId() + " aprobada.");
+        System.out.println("Declaracion ID " + declaracion.getId() + " aprobada.");
     }
 
     public void rechazarDeclaracion(Declaracion declaracion) {
         declaracion.actualizarEstado("RECHAZADA");
-        System.out.println("Declaración ID " + declaracion.getId() + " rechazada.");
+        System.out.println("Declaracion ID " + declaracion.getId() + " rechazada.");
     }
 
     // Getters y Setters

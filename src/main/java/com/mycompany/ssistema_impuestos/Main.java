@@ -3,8 +3,6 @@
  */
 
 package com.mycompany.ssistema_impuestos;
-import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela;
-
 /**
  *
  * @author criss
@@ -12,13 +10,13 @@ import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela
 public class Main {
 
     public static void main(String[] args) {  
-        System.out.println("===== SISTEMA DE DECLARACIÓN DE IMPUESTOS =====\n");
+        System.out.println("===== SISTEMA DE DECLARACION DE IMPUESTOS =====\n");
 
         // 1. Crear pasarela de pago
         Pasarela pasarela = new Pasarela("Banco Nacional");
 
         // 2. Crear un Administrador
-        Administrador admin = new Administrador(1, "Carlos", "Pérez", "admin123", "admin@impuestos.gov", "SUPERADMIN");
+        Administrador admin = new Administrador(1, "Carlos", "Perez", "admin123", "admin@impuestos.gov", "SUPERADMIN");
         admin.registrar();
         admin.iniciarSesion("admin@impuestos.gov", "admin123");
 
@@ -26,7 +24,7 @@ public class Main {
 
         // 3. Crear un Contribuyente
         Contribuyente contribuyente = new Contribuyente(
-            2, "Laura", "Gómez", "pass456", "laura@email.com",
+            2, "Laura", "Gomez", "pass456", "laura@email.com",
             50_000_000, 10_000_000, 5_000_000
         );
         contribuyente.registrar();
@@ -35,13 +33,13 @@ public class Main {
         System.out.println();
 
         // 4. Registrar información financiera
-        contribuyente.registrarInformacionFinanciera(50_000_000, 10_000_000, 5_000_000);
+        contribuyente.registrarInformacionFinanciera(50000000, 10000000, 5000000);
 
         System.out.println();
 
         // 5. Generar y enviar declaración
         Declaracion declaracion = contribuyente.generarDeclaracion();
-        System.out.println("Declaración: " + declaracion);
+        System.out.println("Declaracion: " + declaracion);
         contribuyente.enviarDeclaracion(declaracion);
 
         System.out.println();

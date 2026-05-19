@@ -29,7 +29,7 @@ public class Usuario {
  
     public boolean iniciarSesion(String correo, String contraseña) {
         if (this.correo.equals(correo) && this.contraseña.equals(contraseña)) {
-            System.out.println("Sesión iniciada correctamente.");
+            System.out.println("Sesion iniciada correctamente.");
             return true;
         }
         System.out.println("Credenciales incorrectas.");

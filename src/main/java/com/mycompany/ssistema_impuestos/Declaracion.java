@@ -26,13 +26,13 @@ public class Declaracion {
     }
 
     public void generar() {
-        System.out.println("Generando declaración ID: " + id + " con impuesto total: $" + totalImpuesto);
+        System.out.println("Generando declaracion ID: " + id + " con impuesto total: $" + totalImpuesto);
     }
 
     public void enviar() {
         if ("PENDIENTE".equals(this.estado)) {
             this.estado = "ENVIADA";
-            System.out.println("Declaración ID " + id + " enviada.");
+            System.out.println("Declaracion ID " + id + " enviada.");
         } else {
             System.out.println("La declaración no puede enviarse en estado: " + estado);
         }
@@ -40,7 +40,7 @@ public class Declaracion {
 
     public void actualizarEstado(String nuevoEstado) {
         this.estado = nuevoEstado;
-        System.out.println("Estado de declaración ID " + id + " actualizado a: " + nuevoEstado);
+        System.out.println("Estado de declaracion ID " + id + " actualizado a: " + nuevoEstado);
     }
 
     // Getters y Setters
@@ -66,6 +66,6 @@ public class Declaracion {
 
     @Override
     public String toString() {
-        return "Declaracion{id=" + id + ", fecha=" + fecha + ", estado='" + estado + "', totalImpuesto=" + totalImpuesto + "}";
+        return "Declaracion\n Id= " + id + "\n Fecha= " + fecha + "\n Estado= '" + estado + "'\n TotalImpuesto= " + totalImpuesto;
     }
 }

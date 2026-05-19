@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.ssistema_impuestos;
-import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela;
-
 /**
  *
  * @author criss
@@ -31,7 +29,7 @@ public class Contribuyente extends Usuario {
         this.ingresos = ingresos;
         this.gastos = gastos;
         this.deducciones = deducciones;
-        System.out.println("Información financiera registrada.");
+        System.out.println("Informacion financiera registrada.");
     }
 
     public double calcularImpuestos() {
@@ -50,13 +48,13 @@ public class Contribuyente extends Usuario {
             totalImpuesto
         );
         declaraciones.add(declaracion);
-        System.out.println("Declaración generada con ID: " + declaracion.getId());
+        System.out.println("Declaracion generada con ID: " + declaracion.getId());
         return declaracion;
     }
 
     public void enviarDeclaracion(Declaracion declaracion) {
         declaracion.enviar();
-        System.out.println("Declaración enviada correctamente.");
+        System.out.println("Declaracion enviada correctamente.");
     }
 
     public void realizarPago(Declaracion declaracion, String metodoPago, Pasarela pasarela) {
@@ -78,5 +76,5 @@ public class Contribuyente extends Usuario {
     public double getDeducciones() { return deducciones; }
     public void setDeducciones(double deducciones) { this.deducciones = deducciones; }
 
-    //public List<Declaracion> getDeclaraciones() { return declaraciones; }
+    public List<Declaracion> getDeclaraciones() { return declaraciones; }
 }

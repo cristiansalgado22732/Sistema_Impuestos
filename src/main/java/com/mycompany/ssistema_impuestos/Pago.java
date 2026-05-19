@@ -1,5 +1,5 @@
 package com.mycompany.ssistema_impuestos;
-import Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos.Pasarela;
+
 
 public class Pago {
      private int id;
@@ -30,7 +30,7 @@ public class Pago {
             }
         } else {
             this.estado = "INVALIDO";
-            System.out.println("Pago inválido, no se procesó.");
+            System.out.println("Pago invalido, no se procesó.");
         }
     }
 

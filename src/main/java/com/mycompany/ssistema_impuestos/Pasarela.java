@@ -1,4 +1,4 @@
-package Sistema_Impuestos.src.main.java.com.mycompany.ssistema_impuestos;
+package com.mycompany.ssistema_impuestos;
 
 public class Pasarela {
     private String nombreBanco;
@@ -11,14 +11,14 @@ public class Pasarela {
         System.out.println("[" + nombreBanco + "] Validando pago de $" + pago.getMonto() + "...");
         // Lógica de validación: monto debe ser mayor a 0
         boolean esValido = pago.getMonto() > 0;
-        System.out.println("[" + nombreBanco + "] Pago " + (esValido ? "válido" : "inválido") + ".");
+        System.out.println("[" + nombreBanco + "] Pago " + (esValido ? "valido" : "invalido") + ".");
         return esValido;
     }
 
     public boolean procesarTransaccion(Pago pago) {
-        System.out.println("[" + nombreBanco + "] Procesando transacción de $" + pago.getMonto() + " por " + pago.getMetodo() + "...");
+        System.out.println("[" + nombreBanco + "] Procesando transaccion de $" + pago.getMonto() + " por " + pago.getMetodo() + "...");
         // Simulación de transacción exitosa
-        System.out.println("[" + nombreBanco + "] Transacción completada.");
+        System.out.println("[" + nombreBanco + "] Transaccion completada.");
         return true;
     }
 
